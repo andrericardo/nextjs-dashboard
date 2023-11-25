@@ -9,6 +9,10 @@ export default async function Page({ params }: { params: { id: string } }) {
     fetchCustomers(),
   ]);
 
+  if (invoice === undefined) {
+    return;
+  }
+
   return (
     <main>
       <Breadcrumbs
